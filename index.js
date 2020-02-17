@@ -34,4 +34,4 @@ client.on('guildMemberAdd', function (member) {
     member.addRole('676867304008712233')
 });
 
-client.login('Njc4NjE0NzI3NDA4MjIyMjE3.XkqtVg.VVeOU3U3vYiEkXKcEefFu0wNDmw');
+client.login('Token');
