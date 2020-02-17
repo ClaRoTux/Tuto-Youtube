@@ -26,4 +26,12 @@ fs.readdir('./Events/', (error, f) => {
         });
 });
 
-client.login('token');
+client.on('guildMemberAdd', function (member) {
+    let embed = new Discord.RichEmbed()
+        .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
+        .setFooter('Nous sommes désormais ' + member.guild.memberCount)
+    member.guild.channels.get('676869685706489876').send(embed)
+    member.addRole('676867304008712233')
+});
+
+client.login('Njc4NjE0NzI3NDA4MjIyMjE3.XkqtVg.VVeOU3U3vYiEkXKcEefFu0wNDmw');
